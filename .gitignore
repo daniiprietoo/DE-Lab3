@@ -1,5 +1,7 @@
 data/
 collections/
-pycache/
+__pycache__/
 .DS_Store
 .ipynb_checkpoints/
+.env
+converted_images/
