@@ -33,7 +33,6 @@ def format_age(age_str: str) -> int | None:
     if not age_str or len(age_str) != 4:
         print(f"Invalid age string: {age_str}")
         return None
-    print(age_str)
     return int(age_str[:3])
 
 
@@ -90,3 +89,10 @@ def normalize_pixel_spacing(raw_value):
     normalized = [float(v) for v in raw_value]
     bins = [0.6, 0.65, 0.7, 0.75, 0.8]
     return [round_to_nearest_bin(v, bins) for v in normalized]
+
+def extract_year_month(date_string: str):
+    if len(date_string) < 6:
+        return None, None
+    year = int(date_string[:4])
+    month = int(date_string[4:6])
+    return year, month
